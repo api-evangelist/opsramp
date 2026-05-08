@@ -23,6 +23,8 @@ apis:
     properties:
       - type: Documentation
         url: https://docs.opsramp.com
+      - url: openapi/opsramp-openapi.yml
+        type: OpenAPI
 common:
   - type: Website
     url: https://www.opsramp.com
