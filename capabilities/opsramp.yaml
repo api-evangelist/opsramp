@@ -1,0 +1,636 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: OpsRamp API
+  description: 'OpsRamp API. 16 operations. Lead operation: Obtain OAuth 2.0 access token using client credentials. Self-contained
+    Naftiko capability covering one Opsramp business surface.'
+  tags:
+  - Opsramp
+  - OpsRamp API
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    OPSRAMP_API_KEY: OPSRAMP_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: opsramp
+    baseUri: https://api.opsramp.com
+    description: OpsRamp API business capability. Self-contained, no shared references.
+    resources:
+    - name: tenancy-auth-oauth-token
+      path: /tenancy/auth/oauth/token
+      operations:
+      - name: getaccesstoken
+        method: POST
+        description: Obtain OAuth 2.0 access token using client credentials
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: clientId-alerts
+      path: /{clientId}/alerts
+      operations:
+      - name: createalert
+        method: POST
+        description: Create alerts on resources
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+    - name: clientId-alerts-alertId-actions-action
+      path: /{clientId}/alerts/{alertId}/actions/{action}
+      operations:
+      - name: alertaction
+        method: POST
+        description: Execute an action on an alert
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+    - name: clientId-resources
+      path: /{clientId}/resources
+      operations:
+      - name: createresource
+        method: POST
+        description: Create a new resource
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+    - name: clientId-resources-resourceId
+      path: /{clientId}/resources/{resourceId}
+      operations:
+      - name: getresource
+        method: GET
+        description: Retrieve resource details
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: clientId-resources-resourceId-templates
+      path: /{clientId}/resources/{resourceId}/templates
+      operations:
+      - name: listresourcetemplates
+        method: GET
+        description: View templates assigned to a resource
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: clientId-ticketentity
+      path: /{clientId}/ticketentity
+      operations:
+      - name: createticket
+        method: POST
+        description: Create a ticket
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+    - name: clientId-ticketentity-ticketId-actions
+      path: /{clientId}/ticketentity/{ticketId}/actions
+      operations:
+      - name: updateticket
+        method: POST
+        description: Update a ticket with an action
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+    - name: tenantId-alerts-search
+      path: /{tenantId}/alerts-search
+      operations:
+      - name: searchalerts
+        method: GET
+        description: Search alerts
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: tenantId-alerts-alertId
+      path: /{tenantId}/alerts/{alertId}
+      operations:
+      - name: getalert
+        method: GET
+        description: Fetch alert details
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: tenantId-jobs
+      path: /{tenantId}/jobs
+      operations:
+      - name: createjob
+        method: POST
+        description: Create automation job
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+    - name: tenantId-jobs-jobId-run
+      path: /{tenantId}/jobs/{jobId}/run
+      operations:
+      - name: runjob
+        method: POST
+        description: Execute a scheduled job
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+    - name: tenantId-monitoring-templates-search
+      path: /{tenantId}/monitoring/templates-search
+      operations:
+      - name: searchmonitoringtemplates
+        method: GET
+        description: Search monitoring templates
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: tenantId-resourcemonitors
+      path: /{tenantId}/resourcemonitors
+      operations:
+      - name: createresourcemonitor
+        method: POST
+        description: Create resource monitors
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+    - name: tenantId-resources-search
+      path: /{tenantId}/resources-search
+      operations:
+      - name: searchresources
+        method: GET
+        description: Search resources with filtering
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: tenantId-ticketentity-search
+      path: /{tenantId}/ticketentity-search
+      operations:
+      - name: searchtickets
+        method: GET
+        description: Search tickets
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+  exposes:
+  - type: rest
+    namespace: opsramp-rest
+    port: 8080
+    description: REST adapter for OpsRamp API. One Spectral-compliant resource per consumed operation, prefixed with /v1.
+    resources:
+    - path: /v1/tenancy/auth/oauth/token
+      name: tenancy-auth-oauth-token
+      description: REST surface for tenancy-auth-oauth-token.
+      operations:
+      - method: POST
+        name: getaccesstoken
+        description: Obtain OAuth 2.0 access token using client credentials
+        call: opsramp.getaccesstoken
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/{clientid}/alerts
+      name: clientid-alerts
+      description: REST surface for clientId-alerts.
+      operations:
+      - method: POST
+        name: createalert
+        description: Create alerts on resources
+        call: opsramp.createalert
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/{clientid}/alerts/{alertid}/actions/{action}
+      name: clientid-alerts-alertid-actions-action
+      description: REST surface for clientId-alerts-alertId-actions-action.
+      operations:
+      - method: POST
+        name: alertaction
+        description: Execute an action on an alert
+        call: opsramp.alertaction
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/{clientid}/resources
+      name: clientid-resources
+      description: REST surface for clientId-resources.
+      operations:
+      - method: POST
+        name: createresource
+        description: Create a new resource
+        call: opsramp.createresource
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/{clientid}/resources/{resourceid}
+      name: clientid-resources-resourceid
+      description: REST surface for clientId-resources-resourceId.
+      operations:
+      - method: GET
+        name: getresource
+        description: Retrieve resource details
+        call: opsramp.getresource
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/{clientid}/resources/{resourceid}/templates
+      name: clientid-resources-resourceid-templates
+      description: REST surface for clientId-resources-resourceId-templates.
+      operations:
+      - method: GET
+        name: listresourcetemplates
+        description: View templates assigned to a resource
+        call: opsramp.listresourcetemplates
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/{clientid}/ticketentity
+      name: clientid-ticketentity
+      description: REST surface for clientId-ticketentity.
+      operations:
+      - method: POST
+        name: createticket
+        description: Create a ticket
+        call: opsramp.createticket
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/{clientid}/ticketentity/{ticketid}/actions
+      name: clientid-ticketentity-ticketid-actions
+      description: REST surface for clientId-ticketentity-ticketId-actions.
+      operations:
+      - method: POST
+        name: updateticket
+        description: Update a ticket with an action
+        call: opsramp.updateticket
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/{tenantid}/alerts-search
+      name: tenantid-alerts-search
+      description: REST surface for tenantId-alerts-search.
+      operations:
+      - method: GET
+        name: searchalerts
+        description: Search alerts
+        call: opsramp.searchalerts
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/{tenantid}/alerts/{alertid}
+      name: tenantid-alerts-alertid
+      description: REST surface for tenantId-alerts-alertId.
+      operations:
+      - method: GET
+        name: getalert
+        description: Fetch alert details
+        call: opsramp.getalert
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/{tenantid}/jobs
+      name: tenantid-jobs
+      description: REST surface for tenantId-jobs.
+      operations:
+      - method: POST
+        name: createjob
+        description: Create automation job
+        call: opsramp.createjob
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/{tenantid}/jobs/{jobid}/run
+      name: tenantid-jobs-jobid-run
+      description: REST surface for tenantId-jobs-jobId-run.
+      operations:
+      - method: POST
+        name: runjob
+        description: Execute a scheduled job
+        call: opsramp.runjob
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/{tenantid}/monitoring/templates-search
+      name: tenantid-monitoring-templates-search
+      description: REST surface for tenantId-monitoring-templates-search.
+      operations:
+      - method: GET
+        name: searchmonitoringtemplates
+        description: Search monitoring templates
+        call: opsramp.searchmonitoringtemplates
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/{tenantid}/resourcemonitors
+      name: tenantid-resourcemonitors
+      description: REST surface for tenantId-resourcemonitors.
+      operations:
+      - method: POST
+        name: createresourcemonitor
+        description: Create resource monitors
+        call: opsramp.createresourcemonitor
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/{tenantid}/resources-search
+      name: tenantid-resources-search
+      description: REST surface for tenantId-resources-search.
+      operations:
+      - method: GET
+        name: searchresources
+        description: Search resources with filtering
+        call: opsramp.searchresources
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/{tenantid}/ticketentity-search
+      name: tenantid-ticketentity-search
+      description: REST surface for tenantId-ticketentity-search.
+      operations:
+      - method: GET
+        name: searchtickets
+        description: Search tickets
+        call: opsramp.searchtickets
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: opsramp-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for OpsRamp API. One tool per consumed operation, routed inline through this capability's consumes
+      block.
+    tools:
+    - name: obtain-oauth-2-0-access-token
+      description: Obtain OAuth 2.0 access token using client credentials
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: opsramp.getaccesstoken
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: create-alerts-resources
+      description: Create alerts on resources
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: opsramp.createalert
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: execute-action-alert
+      description: Execute an action on an alert
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: opsramp.alertaction
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: create-new-resource
+      description: Create a new resource
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: opsramp.createresource
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: retrieve-resource-details
+      description: Retrieve resource details
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: opsramp.getresource
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: view-templates-assigned-resource
+      description: View templates assigned to a resource
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: opsramp.listresourcetemplates
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: create-ticket
+      description: Create a ticket
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: opsramp.createticket
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: update-ticket-action
+      description: Update a ticket with an action
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: opsramp.updateticket
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: search-alerts
+      description: Search alerts
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: opsramp.searchalerts
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: fetch-alert-details
+      description: Fetch alert details
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: opsramp.getalert
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: create-automation-job
+      description: Create automation job
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: opsramp.createjob
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: execute-scheduled-job
+      description: Execute a scheduled job
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: opsramp.runjob
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: search-monitoring-templates
+      description: Search monitoring templates
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: opsramp.searchmonitoringtemplates
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: create-resource-monitors
+      description: Create resource monitors
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: opsramp.createresourcemonitor
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: search-resources-filtering
+      description: Search resources with filtering
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: opsramp.searchresources
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: search-tickets
+      description: Search tickets
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: opsramp.searchtickets
+      outputParameters:
+      - type: object
+        mapping: $.
