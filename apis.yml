@@ -16,14 +16,12 @@ apis:
     description: OpsRamp is an AIOps and IT operations management platform for hybrid infrastructure monitoring and management.
     humanURL: https://www.opsramp.com
     tags:
-    - AIOps
+      - AIOps
     properties:
-    - type: Documentation
-      url: https://docs.opsramp.com
-    - url: openapi/opsramp-openapi.yml
-      type: OpenAPI
-    - type: NaftikoCapability
-      url: capabilities/opsramp.yaml
+      - type: Documentation
+        url: https://docs.opsramp.com
+      - url: openapi/opsramp-openapi.yml
+        type: OpenAPI
 common:
   - type: GitHubOrganization
     url: https://github.com/opsramp

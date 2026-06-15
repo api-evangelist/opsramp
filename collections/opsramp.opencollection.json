@@ -1,0 +1,362 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "OpsRamp API",
+    "version": "2.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Obtain OAuth 2.0 access token using client credentials",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://api.opsramp.com/tenancy/auth/oauth/token",
+        "body": {
+          "type": "form-urlencoded",
+          "data": []
+        }
+      },
+      "docs": "Obtain OAuth 2.0 access token using client credentials"
+    },
+    {
+      "info": {
+        "name": "Create a new resource",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://api.opsramp.com/:clientId/resources",
+        "params": [
+          {
+            "name": "clientId",
+            "value": "",
+            "type": "path"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Create a new resource"
+    },
+    {
+      "info": {
+        "name": "Retrieve resource details",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.opsramp.com/:clientId/resources/:resourceId",
+        "params": [
+          {
+            "name": "clientId",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "resourceId",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Retrieve resource details"
+    },
+    {
+      "info": {
+        "name": "Search resources with filtering",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.opsramp.com/:tenantId/resources-search",
+        "params": [
+          {
+            "name": "tenantId",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Search resources with filtering"
+    },
+    {
+      "info": {
+        "name": "Create alerts on resources",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://api.opsramp.com/:clientId/alerts",
+        "params": [
+          {
+            "name": "clientId",
+            "value": "",
+            "type": "path"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Create alerts on resources"
+    },
+    {
+      "info": {
+        "name": "Fetch alert details",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.opsramp.com/:tenantId/alerts/:alertId",
+        "params": [
+          {
+            "name": "tenantId",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "alertId",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Fetch alert details"
+    },
+    {
+      "info": {
+        "name": "Search alerts",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.opsramp.com/:tenantId/alerts-search",
+        "params": [
+          {
+            "name": "tenantId",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Search alerts"
+    },
+    {
+      "info": {
+        "name": "Execute an action on an alert",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://api.opsramp.com/:clientId/alerts/:alertId/actions/:action",
+        "params": [
+          {
+            "name": "clientId",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "alertId",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "action",
+            "value": "",
+            "type": "path"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Execute an action on an alert"
+    },
+    {
+      "info": {
+        "name": "Search monitoring templates",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.opsramp.com/:tenantId/monitoring/templates-search",
+        "params": [
+          {
+            "name": "tenantId",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Search monitoring templates"
+    },
+    {
+      "info": {
+        "name": "Create resource monitors",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://api.opsramp.com/:tenantId/resourcemonitors",
+        "params": [
+          {
+            "name": "tenantId",
+            "value": "",
+            "type": "path"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Create resource monitors"
+    },
+    {
+      "info": {
+        "name": "View templates assigned to a resource",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.opsramp.com/:clientId/resources/:resourceId/templates",
+        "params": [
+          {
+            "name": "clientId",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "resourceId",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "View templates assigned to a resource"
+    },
+    {
+      "info": {
+        "name": "Create a ticket",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://api.opsramp.com/:clientId/ticketentity",
+        "params": [
+          {
+            "name": "clientId",
+            "value": "",
+            "type": "path"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Create a ticket"
+    },
+    {
+      "info": {
+        "name": "Search tickets",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.opsramp.com/:tenantId/ticketentity-search",
+        "params": [
+          {
+            "name": "tenantId",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Search tickets"
+    },
+    {
+      "info": {
+        "name": "Update a ticket with an action",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://api.opsramp.com/:clientId/ticketentity/:ticketId/actions",
+        "params": [
+          {
+            "name": "clientId",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "ticketId",
+            "value": "",
+            "type": "path"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Update a ticket with an action"
+    },
+    {
+      "info": {
+        "name": "Create automation job",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://api.opsramp.com/:tenantId/jobs",
+        "params": [
+          {
+            "name": "tenantId",
+            "value": "",
+            "type": "path"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Create automation job"
+    },
+    {
+      "info": {
+        "name": "Execute a scheduled job",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://api.opsramp.com/:tenantId/jobs/:jobId/run",
+        "params": [
+          {
+            "name": "tenantId",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "jobId",
+            "value": "",
+            "type": "path"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Execute a scheduled job"
+    }
+  ],
+  "bundled": true
+}
