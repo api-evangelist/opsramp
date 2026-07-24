@@ -1,0 +1,50 @@
+openapi: 3.1.0
+info:
+  title: OpsRamp Alerts Resourcemonitors API
+  description: OpsRamp is an AIOps and IT operations management platform. The REST API covers authentication, resources, alerts, monitoring, tickets, and automation jobs.
+  version: '2.0'
+servers:
+- url: https://api.opsramp.com
+  description: OpsRamp API
+tags:
+- name: Resourcemonitors
+paths:
+  /{tenantId}/resourcemonitors:
+    parameters:
+    - $ref: '#/components/parameters/TenantId'
+    post:
+      summary: Create resource monitors
+      operationId: createResourceMonitor
+      requestBody:
+        $ref: '#/components/requestBodies/Generic'
+      responses:
+        '200':
+          $ref: '#/components/responses/Generic'
+      tags:
+      - Resourcemonitors
+components:
+  parameters:
+    TenantId:
+      name: tenantId
+      in: path
+      required: true
+      schema:
+        type: string
+  requestBodies:
+    Generic:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            additionalProperties: true
+  responses:
+    Generic:
+      description: Successful response
+      content:
+        application/json:
+          schema:
+            type: object
+            additionalProperties: true
+x-generated-from: https://develop.opsramp.com/v3
+x-generated-by: claude-crawl-2026-05-08

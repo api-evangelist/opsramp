@@ -1,0 +1,95 @@
+openapi: 3.1.0
+info:
+  title: OpsRamp Alerts API
+  description: OpsRamp is an AIOps and IT operations management platform. The REST API covers authentication, resources, alerts, monitoring, tickets, and automation jobs.
+  version: '2.0'
+servers:
+- url: https://api.opsramp.com
+  description: OpsRamp API
+tags:
+- name: Alerts
+paths:
+  /{clientId}/alerts:
+    parameters:
+    - $ref: '#/components/parameters/ClientId'
+    post:
+      summary: Create alerts on resources
+      operationId: createAlert
+      requestBody:
+        $ref: '#/components/requestBodies/Generic'
+      responses:
+        '200':
+          $ref: '#/components/responses/Generic'
+      tags:
+      - Alerts
+  /{tenantId}/alerts/{alertId}:
+    parameters:
+    - $ref: '#/components/parameters/TenantId'
+    - name: alertId
+      in: path
+      required: true
+      schema:
+        type: string
+    get:
+      summary: Fetch alert details
+      operationId: getAlert
+      responses:
+        '200':
+          $ref: '#/components/responses/Generic'
+      tags:
+      - Alerts
+  /{clientId}/alerts/{alertId}/actions/{action}:
+    parameters:
+    - $ref: '#/components/parameters/ClientId'
+    - name: alertId
+      in: path
+      required: true
+      schema:
+        type: string
+    - name: action
+      in: path
+      required: true
+      schema:
+        type: string
+    post:
+      summary: Execute an action on an alert
+      operationId: alertAction
+      requestBody:
+        $ref: '#/components/requestBodies/Generic'
+      responses:
+        '200':
+          $ref: '#/components/responses/Generic'
+      tags:
+      - Alerts
+components:
+  parameters:
+    TenantId:
+      name: tenantId
+      in: path
+      required: true
+      schema:
+        type: string
+    ClientId:
+      name: clientId
+      in: path
+      required: true
+      schema:
+        type: string
+  requestBodies:
+    Generic:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            additionalProperties: true
+  responses:
+    Generic:
+      description: Successful response
+      content:
+        application/json:
+          schema:
+            type: object
+            additionalProperties: true
+x-generated-from: https://develop.opsramp.com/v3
+x-generated-by: claude-crawl-2026-05-08

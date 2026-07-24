@@ -1,0 +1,82 @@
+openapi: 3.1.0
+info:
+  title: OpsRamp Alerts Resources API
+  description: OpsRamp is an AIOps and IT operations management platform. The REST API covers authentication, resources, alerts, monitoring, tickets, and automation jobs.
+  version: '2.0'
+servers:
+- url: https://api.opsramp.com
+  description: OpsRamp API
+tags:
+- name: Resources
+paths:
+  /{clientId}/resources:
+    parameters:
+    - $ref: '#/components/parameters/ClientId'
+    post:
+      summary: Create a new resource
+      operationId: createResource
+      requestBody:
+        $ref: '#/components/requestBodies/Generic'
+      responses:
+        '200':
+          $ref: '#/components/responses/Generic'
+      tags:
+      - Resources
+  /{clientId}/resources/{resourceId}:
+    parameters:
+    - $ref: '#/components/parameters/ClientId'
+    - name: resourceId
+      in: path
+      required: true
+      schema:
+        type: string
+    get:
+      summary: Retrieve resource details
+      operationId: getResource
+      responses:
+        '200':
+          $ref: '#/components/responses/Generic'
+      tags:
+      - Resources
+  /{clientId}/resources/{resourceId}/templates:
+    parameters:
+    - $ref: '#/components/parameters/ClientId'
+    - name: resourceId
+      in: path
+      required: true
+      schema:
+        type: string
+    get:
+      summary: View templates assigned to a resource
+      operationId: listResourceTemplates
+      responses:
+        '200':
+          $ref: '#/components/responses/Generic'
+      tags:
+      - Resources
+components:
+  requestBodies:
+    Generic:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            additionalProperties: true
+  parameters:
+    ClientId:
+      name: clientId
+      in: path
+      required: true
+      schema:
+        type: string
+  responses:
+    Generic:
+      description: Successful response
+      content:
+        application/json:
+          schema:
+            type: object
+            additionalProperties: true
+x-generated-from: https://develop.opsramp.com/v3
+x-generated-by: claude-crawl-2026-05-08

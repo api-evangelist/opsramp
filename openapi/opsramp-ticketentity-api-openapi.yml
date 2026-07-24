@@ -1,0 +1,68 @@
+openapi: 3.1.0
+info:
+  title: OpsRamp Alerts Ticketentity API
+  description: OpsRamp is an AIOps and IT operations management platform. The REST API covers authentication, resources, alerts, monitoring, tickets, and automation jobs.
+  version: '2.0'
+servers:
+- url: https://api.opsramp.com
+  description: OpsRamp API
+tags:
+- name: Ticketentity
+paths:
+  /{clientId}/ticketentity:
+    parameters:
+    - $ref: '#/components/parameters/ClientId'
+    post:
+      summary: Create a ticket
+      operationId: createTicket
+      requestBody:
+        $ref: '#/components/requestBodies/Generic'
+      responses:
+        '200':
+          $ref: '#/components/responses/Generic'
+      tags:
+      - Ticketentity
+  /{clientId}/ticketentity/{ticketId}/actions:
+    parameters:
+    - $ref: '#/components/parameters/ClientId'
+    - name: ticketId
+      in: path
+      required: true
+      schema:
+        type: string
+    post:
+      summary: Update a ticket with an action
+      operationId: updateTicket
+      requestBody:
+        $ref: '#/components/requestBodies/Generic'
+      responses:
+        '200':
+          $ref: '#/components/responses/Generic'
+      tags:
+      - Ticketentity
+components:
+  requestBodies:
+    Generic:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            additionalProperties: true
+  parameters:
+    ClientId:
+      name: clientId
+      in: path
+      required: true
+      schema:
+        type: string
+  responses:
+    Generic:
+      description: Successful response
+      content:
+        application/json:
+          schema:
+            type: object
+            additionalProperties: true
+x-generated-from: https://develop.opsramp.com/v3
+x-generated-by: claude-crawl-2026-05-08
