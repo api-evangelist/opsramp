@@ -2,7 +2,19 @@ aid: opsramp
 name: OpsRamp
 description: OpsRamp is an AIOps and IT operations management platform for hybrid infrastructure monitoring and management.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Freemium
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/opsramp.png
 tags:
   - AIOps
   - IT Operations
@@ -11,17 +23,116 @@ created: '2026-03-27'
 modified: '2026-05-19'
 specificationVersion: '0.19'
 apis:
-  - aid: opsramp:opsramp
-    name: OpsRamp
-    description: OpsRamp is an AIOps and IT operations management platform for hybrid infrastructure monitoring and management.
-    humanURL: https://www.opsramp.com
-    tags:
-      - AIOps
-    properties:
-      - type: Documentation
-        url: https://docs.opsramp.com
-      - url: openapi/opsramp-openapi.yml
-        type: OpenAPI
+- aid: opsramp:opsramp-alerts-api
+  name: OpsRamp Alerts API
+  description: The Alerts API from OpsRamp — 3 operation(s) for alerts.
+  humanURL: https://www.opsramp.com
+  tags:
+  - Alerts
+  properties:
+  - type: OpenAPI
+    url: openapi/opsramp-alerts-api-openapi.yml
+  - type: Documentation
+    url: https://docs.opsramp.com
+- aid: opsramp:opsramp-alerts-search-api
+  name: OpsRamp Alerts Search API
+  description: The Alerts Search API from OpsRamp — 1 operation(s) for alerts search.
+  humanURL: https://www.opsramp.com
+  tags:
+  - Alerts Search
+  properties:
+  - type: OpenAPI
+    url: openapi/opsramp-alerts-search-api-openapi.yml
+  - type: Documentation
+    url: https://docs.opsramp.com
+- aid: opsramp:opsramp-jobs-api
+  name: OpsRamp Jobs API
+  description: The Jobs API from OpsRamp — 2 operation(s) for jobs.
+  humanURL: https://www.opsramp.com
+  tags:
+  - Jobs
+  properties:
+  - type: OpenAPI
+    url: openapi/opsramp-jobs-api-openapi.yml
+  - type: Documentation
+    url: https://docs.opsramp.com
+- aid: opsramp:opsramp-monitoring-api
+  name: OpsRamp Monitoring API
+  description: The Monitoring API from OpsRamp — 1 operation(s) for monitoring.
+  humanURL: https://www.opsramp.com
+  tags:
+  - Monitoring
+  properties:
+  - type: OpenAPI
+    url: openapi/opsramp-monitoring-api-openapi.yml
+  - type: Documentation
+    url: https://docs.opsramp.com
+- aid: opsramp:opsramp-resourcemonitors-api
+  name: OpsRamp Resourcemonitors API
+  description: The Resourcemonitors API from OpsRamp — 1 operation(s) for resourcemonitors.
+  humanURL: https://www.opsramp.com
+  tags:
+  - Resourcemonitors
+  properties:
+  - type: OpenAPI
+    url: openapi/opsramp-resourcemonitors-api-openapi.yml
+  - type: Documentation
+    url: https://docs.opsramp.com
+- aid: opsramp:opsramp-resources-api
+  name: OpsRamp Resources API
+  description: The Resources API from OpsRamp — 3 operation(s) for resources.
+  humanURL: https://www.opsramp.com
+  tags:
+  - Resources
+  properties:
+  - type: OpenAPI
+    url: openapi/opsramp-resources-api-openapi.yml
+  - type: Documentation
+    url: https://docs.opsramp.com
+- aid: opsramp:opsramp-resources-search-api
+  name: OpsRamp Resources Search API
+  description: The Resources Search API from OpsRamp — 1 operation(s) for resources search.
+  humanURL: https://www.opsramp.com
+  tags:
+  - Resources Search
+  properties:
+  - type: OpenAPI
+    url: openapi/opsramp-resources-search-api-openapi.yml
+  - type: Documentation
+    url: https://docs.opsramp.com
+- aid: opsramp:opsramp-tenancy-api
+  name: OpsRamp Tenancy API
+  description: The Tenancy API from OpsRamp — 1 operation(s) for tenancy.
+  humanURL: https://www.opsramp.com
+  tags:
+  - Tenancy
+  properties:
+  - type: OpenAPI
+    url: openapi/opsramp-tenancy-api-openapi.yml
+  - type: Documentation
+    url: https://docs.opsramp.com
+- aid: opsramp:opsramp-ticketentity-api
+  name: OpsRamp Ticketentity API
+  description: The Ticketentity API from OpsRamp — 2 operation(s) for ticketentity.
+  humanURL: https://www.opsramp.com
+  tags:
+  - Ticketentity
+  properties:
+  - type: OpenAPI
+    url: openapi/opsramp-ticketentity-api-openapi.yml
+  - type: Documentation
+    url: https://docs.opsramp.com
+- aid: opsramp:opsramp-ticketentity-search-api
+  name: OpsRamp Ticketentity Search API
+  description: The Ticketentity Search API from OpsRamp — 1 operation(s) for ticketentity search.
+  humanURL: https://www.opsramp.com
+  tags:
+  - Ticketentity Search
+  properties:
+  - type: OpenAPI
+    url: openapi/opsramp-ticketentity-search-api-openapi.yml
+  - type: Documentation
+    url: https://docs.opsramp.com
 common:
   - type: AgenticAccess
     url: agentic-access/opsramp-agentic-access.yml
