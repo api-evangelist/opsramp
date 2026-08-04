@@ -1,0 +1,32 @@
+{
+  "provider": "opsramp",
+  "sources": [
+    "opsramp-alerts-api-openapi.yml",
+    "opsramp-alerts-search-api-openapi.yml",
+    "opsramp-jobs-api-openapi.yml",
+    "opsramp-monitoring-api-openapi.yml",
+    "opsramp-resourcemonitors-api-openapi.yml",
+    "opsramp-resources-api-openapi.yml",
+    "opsramp-resources-search-api-openapi.yml",
+    "opsramp-tenancy-api-openapi.yml",
+    "opsramp-ticketentity-api-openapi.yml",
+    "opsramp-ticketentity-search-api-openapi.yml"
+  ],
+  "outputs": [
+    "opsramp-alerts-api-openapi.yml",
+    "opsramp-alerts-search-api-openapi.yml",
+    "opsramp-jobs-api-openapi.yml",
+    "opsramp-monitoring-api-openapi.yml",
+    "opsramp-resourcemonitors-api-openapi.yml",
+    "opsramp-resources-api-openapi.yml",
+    "opsramp-resources-search-api-openapi.yml",
+    "opsramp-tenancy-api-openapi.yml",
+    "opsramp-ticketentity-api-openapi.yml",
+    "opsramp-ticketentity-search-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
