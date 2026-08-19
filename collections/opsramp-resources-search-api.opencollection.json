@@ -1,0 +1,36 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "OpsRamp Alerts Resources Search API",
+    "version": "2.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Resources Search",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Search resources with filtering",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.opsramp.com/:tenantId/resources-search",
+            "params": [
+              {
+                "name": "tenantId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Search resources with filtering"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,95 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "OpsRamp Alerts API",
+    "version": "2.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Alerts",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create alerts on resources",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.opsramp.com/:clientId/alerts",
+            "params": [
+              {
+                "name": "clientId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create alerts on resources"
+        },
+        {
+          "info": {
+            "name": "Fetch alert details",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.opsramp.com/:tenantId/alerts/:alertId",
+            "params": [
+              {
+                "name": "tenantId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "alertId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Fetch alert details"
+        },
+        {
+          "info": {
+            "name": "Execute an action on an alert",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.opsramp.com/:clientId/alerts/:alertId/actions/:action",
+            "params": [
+              {
+                "name": "clientId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "alertId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "action",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Execute an action on an alert"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

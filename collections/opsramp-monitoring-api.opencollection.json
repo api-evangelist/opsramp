@@ -1,0 +1,36 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "OpsRamp Alerts Monitoring API",
+    "version": "2.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Monitoring",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Search monitoring templates",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.opsramp.com/:tenantId/monitoring/templates-search",
+            "params": [
+              {
+                "name": "tenantId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Search monitoring templates"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

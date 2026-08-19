@@ -1,0 +1,36 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "OpsRamp Alerts Ticketentity Search API",
+    "version": "2.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Ticketentity Search",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Search tickets",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.opsramp.com/:tenantId/ticketentity-search",
+            "params": [
+              {
+                "name": "tenantId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Search tickets"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,33 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "OpsRamp Alerts Tenancy API",
+    "version": "2.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Tenancy",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Obtain OAuth 2.0 access token using client credentials",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.opsramp.com/tenancy/auth/oauth/token",
+            "body": {
+              "type": "form-urlencoded",
+              "data": []
+            }
+          },
+          "docs": "Obtain OAuth 2.0 access token using client credentials"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

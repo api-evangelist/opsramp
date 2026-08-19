@@ -1,0 +1,40 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "OpsRamp Alerts Resourcemonitors API",
+    "version": "2.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Resourcemonitors",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create resource monitors",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.opsramp.com/:tenantId/resourcemonitors",
+            "params": [
+              {
+                "name": "tenantId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create resource monitors"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

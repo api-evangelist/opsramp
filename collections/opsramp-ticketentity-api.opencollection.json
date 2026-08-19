@@ -1,0 +1,67 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "OpsRamp Alerts Ticketentity API",
+    "version": "2.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Ticketentity",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create a ticket",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.opsramp.com/:clientId/ticketentity",
+            "params": [
+              {
+                "name": "clientId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a ticket"
+        },
+        {
+          "info": {
+            "name": "Update a ticket with an action",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.opsramp.com/:clientId/ticketentity/:ticketId/actions",
+            "params": [
+              {
+                "name": "clientId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "ticketId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update a ticket with an action"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
