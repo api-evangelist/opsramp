@@ -50,6 +50,8 @@ apis:
   description: The Jobs API from OpsRamp — 2 operation(s) for jobs.
   humanURL: https://www.opsramp.com
   tags:
+  - Job
+  tags_raw:
   - Jobs
   properties:
   - type: OpenAPI
