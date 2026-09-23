@@ -1,16 +1,7 @@
 {
   "provider": "opsramp",
   "sources": [
-    "opsramp-alerts-api-openapi.yml",
-    "opsramp-alerts-search-api-openapi.yml",
-    "opsramp-jobs-api-openapi.yml",
-    "opsramp-monitoring-api-openapi.yml",
-    "opsramp-resourcemonitors-api-openapi.yml",
-    "opsramp-resources-api-openapi.yml",
-    "opsramp-resources-search-api-openapi.yml",
-    "opsramp-tenancy-api-openapi.yml",
-    "opsramp-ticketentity-api-openapi.yml",
-    "opsramp-ticketentity-search-api-openapi.yml"
+    "_ae-authored/opsramp-openapi.yml"
   ],
   "outputs": [
     "opsramp-alerts-api-openapi.yml",
@@ -27,6 +18,47 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (0 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "opsramp-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "opsramp-openapi.yml: tagged paths POST /tenancy/auth/oauth/token -> Tenancy",
+    "opsramp-openapi.yml: tagged paths POST /{clientId}/resources -> Resources",
+    "opsramp-openapi.yml: tagged paths GET /{clientId}/resources/{resourceId} -> Resources",
+    "opsramp-openapi.yml: tagged paths GET /{tenantId}/resources-search -> Resources Search",
+    "opsramp-openapi.yml: tagged paths POST /{clientId}/alerts -> Alerts",
+    "opsramp-openapi.yml: tagged paths GET /{tenantId}/alerts/{alertId} -> Alerts",
+    "opsramp-openapi.yml: tagged paths GET /{tenantId}/alerts-search -> Alerts Search",
+    "opsramp-openapi.yml: tagged paths POST /{clientId}/alerts/{alertId}/actions/{action} -> Alerts",
+    "opsramp-openapi.yml: tagged paths GET /{tenantId}/monitoring/templates-search -> Monitoring",
+    "opsramp-openapi.yml: tagged paths POST /{tenantId}/resourcemonitors -> Resourcemonitors",
+    "opsramp-openapi.yml: tagged paths GET /{clientId}/resources/{resourceId}/templates -> Resources",
+    "opsramp-openapi.yml: tagged paths POST /{clientId}/ticketentity -> Ticketentity",
+    "opsramp-openapi.yml: tagged paths GET /{tenantId}/ticketentity-search -> Ticketentity Search",
+    "opsramp-openapi.yml: tagged paths POST /{clientId}/ticketentity/{ticketId}/actions -> Ticketentity",
+    "opsramp-openapi.yml: tagged paths POST /{tenantId}/jobs -> Jobs",
+    "opsramp-openapi.yml: tagged paths POST /{tenantId}/jobs/{jobId}/run -> Jobs",
+    "opsramp-openapi.yml: declared missing tag: Alerts",
+    "opsramp-openapi.yml: declared missing tag: Alerts Search",
+    "opsramp-openapi.yml: declared missing tag: Jobs",
+    "opsramp-openapi.yml: declared missing tag: Monitoring",
+    "opsramp-openapi.yml: declared missing tag: Resourcemonitors",
+    "opsramp-openapi.yml: declared missing tag: Resources",
+    "opsramp-openapi.yml: declared missing tag: Resources Search",
+    "opsramp-openapi.yml: declared missing tag: Tenancy",
+    "opsramp-openapi.yml: declared missing tag: Ticketentity",
+    "opsramp-openapi.yml: declared missing tag: Ticketentity Search",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "opsramp-alerts-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "opsramp-alerts-search-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "opsramp-jobs-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "opsramp-monitoring-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "opsramp-resourcemonitors-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "opsramp-resources-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "opsramp-resources-search-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "opsramp-tenancy-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "opsramp-ticketentity-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "opsramp-ticketentity-search-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
