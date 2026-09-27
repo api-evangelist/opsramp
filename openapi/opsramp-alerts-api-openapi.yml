@@ -62,14 +62,19 @@ paths:
       tags:
       - Alerts
 components:
-  responses:
-    Generic:
-      description: Successful response
-      content:
-        application/json:
-          schema:
-            type: object
-            additionalProperties: true
+  parameters:
+    TenantId:
+      name: tenantId
+      in: path
+      required: true
+      schema:
+        type: string
+    ClientId:
+      name: clientId
+      in: path
+      required: true
+      schema:
+        type: string
   requestBodies:
     Generic:
       required: true
@@ -78,18 +83,13 @@ components:
           schema:
             type: object
             additionalProperties: true
-  parameters:
-    ClientId:
-      name: clientId
-      in: path
-      required: true
-      schema:
-        type: string
-    TenantId:
-      name: tenantId
-      in: path
-      required: true
-      schema:
-        type: string
+  responses:
+    Generic:
+      description: Successful response
+      content:
+        application/json:
+          schema:
+            type: object
+            additionalProperties: true
 x-generated-from: https://develop.opsramp.com/v3
 x-generated-by: claude-crawl-2026-05-08

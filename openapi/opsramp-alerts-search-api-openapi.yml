@@ -21,6 +21,13 @@ paths:
       tags:
       - Alerts Search
 components:
+  parameters:
+    TenantId:
+      name: tenantId
+      in: path
+      required: true
+      schema:
+        type: string
   responses:
     Generic:
       description: Successful response
@@ -29,12 +36,5 @@ components:
           schema:
             type: object
             additionalProperties: true
-  parameters:
-    TenantId:
-      name: tenantId
-      in: path
-      required: true
-      schema:
-        type: string
 x-generated-from: https://develop.opsramp.com/v3
 x-generated-by: claude-crawl-2026-05-08
