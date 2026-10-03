@@ -41,6 +41,14 @@ paths:
       tags:
       - Ticketentity
 components:
+  responses:
+    Generic:
+      description: Successful response
+      content:
+        application/json:
+          schema:
+            type: object
+            additionalProperties: true
   requestBodies:
     Generic:
       required: true
@@ -56,13 +64,5 @@ components:
       required: true
       schema:
         type: string
-  responses:
-    Generic:
-      description: Successful response
-      content:
-        application/json:
-          schema:
-            type: object
-            additionalProperties: true
 x-generated-from: https://develop.opsramp.com/v3
 x-generated-by: claude-crawl-2026-05-08

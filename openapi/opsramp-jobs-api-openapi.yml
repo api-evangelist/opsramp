@@ -41,14 +41,6 @@ paths:
       tags:
       - Jobs
 components:
-  requestBodies:
-    Generic:
-      required: true
-      content:
-        application/json:
-          schema:
-            type: object
-            additionalProperties: true
   parameters:
     TenantId:
       name: tenantId
@@ -59,6 +51,14 @@ components:
   responses:
     Generic:
       description: Successful response
+      content:
+        application/json:
+          schema:
+            type: object
+            additionalProperties: true
+  requestBodies:
+    Generic:
+      required: true
       content:
         application/json:
           schema:
