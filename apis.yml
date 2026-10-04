@@ -147,6 +147,9 @@ apis:
   - type: Documentation
     url: https://docs.opsramp.com
 common:
+  - type: CapabilityMap
+    url: capabilities/opsramp-capability-edges.yml
+    name: OpsRamp Business Capability Map
   - type: AgenticAccess
     url: agentic-access/opsramp-agentic-access.yml
   - type: DomainSecurity

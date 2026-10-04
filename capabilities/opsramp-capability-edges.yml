@@ -1,0 +1,83 @@
+slug: opsramp
+provider: OpsRamp
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Software & Technology
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 7
+edges:
+- tag: Ticketentity
+  spec_file: opsramp-ticketentity-api-openapi.yml
+  capability_id: BC-600.30
+  capability_id_l1: BC-600
+  capability_name: IT Service Management
+  confidence: 0.85
+  evidence: POST /{clientId}/ticketentity  createTicket  Create a ticket; POST /{clientId}/ticketentity/{ticketId}/actions  updateTicket  Update
+    a ticket with an action
+  reason: Ticket creation and action-based updates within an IT operations management platform is classic
+    IT service management (incident/request handling).
+- tag: Alerts
+  spec_file: opsramp-alerts-api-openapi.yml
+  capability_id: BC-600.40
+  capability_id_l1: BC-600
+  capability_name: IT Operations Management
+  confidence: 0.8
+  evidence: POST /{clientId}/alerts  Create alerts on resources; POST /{clientId}/alerts/{alertId}/actions/{action}  Execute
+    an action on an alert
+  reason: Infrastructure monitoring alerts raised against managed resources on an AIOps/ITOM platform
+    — day-to-day IT operations monitoring, not financial-crime or business alerting.
+- tag: Monitoring
+  spec_file: opsramp-monitoring-api-openapi.yml
+  capability_id: BC-600.40
+  capability_id_l1: BC-600
+  capability_name: IT Operations Management
+  confidence: 0.8
+  evidence: GET /{tenantId}/monitoring/templates-search  Search monitoring templates
+  reason: Monitoring templates applied to hybrid infrastructure resources — infrastructure monitoring
+    configuration within IT operations management.
+- tag: Resourcemonitors
+  spec_file: opsramp-resourcemonitors-api-openapi.yml
+  capability_id: BC-600.40
+  capability_id_l1: BC-600
+  capability_name: IT Operations Management
+  confidence: 0.75
+  evidence: POST /{tenantId}/resourcemonitors  createResourceMonitor  Create resource monitors; vendor
+    is an "AIOps and IT operations management platform for hybrid infrastructure monitoring"
+  reason: Creating monitors over infrastructure resources is day-to-day IT operations monitoring. The
+    frame's observability capability (BC-4220.20) concerns a SaaS vendor's own service; this is a general
+    ITOM tool, so the cross-industry IT Operations capability is the honest mapping.
+- tag: Alerts Search
+  spec_file: opsramp-alerts-search-api-openapi.yml
+  capability_id: BC-600.40
+  capability_id_l1: BC-600
+  capability_name: IT Operations Management
+  confidence: 0.7
+  evidence: GET /{tenantId}/alerts-search  Search alerts
+  reason: Query surface over the same IT infrastructure monitoring alerts; same capability, though it
+    is only a search endpoint so confidence is lower.
+- tag: Jobs
+  spec_file: opsramp-jobs-api-openapi.yml
+  capability_id: BC-600.40
+  capability_id_l1: BC-600
+  capability_name: IT Operations Management
+  confidence: 0.7
+  evidence: POST /{tenantId}/jobs  Create automation job; POST /{tenantId}/jobs/{jobId}/run  Execute a
+    scheduled job
+  reason: Creation and execution of IT automation jobs on managed infrastructure, which is IT operations
+    automation. Could arguably be generic job scheduling plumbing, hence moderate confidence.
+- tag: Ticketentity Search
+  spec_file: opsramp-ticketentity-search-api-openapi.yml
+  capability_id: BC-600.30
+  capability_id_l1: BC-600
+  capability_name: IT Service Management
+  confidence: 0.7
+  evidence: GET /{tenantId}/ticketentity-search  searchTickets  Search tickets
+  reason: Query surface over the ITSM ticket store; supports IT service management, though it is only
+    a retrieval operation so confidence is moderate.
