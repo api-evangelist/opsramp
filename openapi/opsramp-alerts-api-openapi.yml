@@ -62,6 +62,14 @@ paths:
       tags:
       - Alerts
 components:
+  responses:
+    Generic:
+      description: Successful response
+      content:
+        application/json:
+          schema:
+            type: object
+            additionalProperties: true
   parameters:
     TenantId:
       name: tenantId
@@ -75,14 +83,6 @@ components:
       required: true
       schema:
         type: string
-  responses:
-    Generic:
-      description: Successful response
-      content:
-        application/json:
-          schema:
-            type: object
-            additionalProperties: true
   requestBodies:
     Generic:
       required: true

@@ -49,6 +49,13 @@ components:
           schema:
             type: object
             additionalProperties: true
+  parameters:
+    ClientId:
+      name: clientId
+      in: path
+      required: true
+      schema:
+        type: string
   requestBodies:
     Generic:
       required: true
@@ -57,12 +64,5 @@ components:
           schema:
             type: object
             additionalProperties: true
-  parameters:
-    ClientId:
-      name: clientId
-      in: path
-      required: true
-      schema:
-        type: string
 x-generated-from: https://develop.opsramp.com/v3
 x-generated-by: claude-crawl-2026-05-08
