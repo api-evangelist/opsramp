@@ -62,9 +62,9 @@ paths:
       tags:
       - Alerts
 components:
-  responses:
+  requestBodies:
     Generic:
-      description: Successful response
+      required: true
       content:
         application/json:
           schema:
@@ -83,9 +83,9 @@ components:
       required: true
       schema:
         type: string
-  requestBodies:
+  responses:
     Generic:
-      required: true
+      description: Successful response
       content:
         application/json:
           schema:
