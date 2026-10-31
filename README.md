@@ -1,4 +1,4 @@
-# OpsRamp (opsramp)
+# OpsRamp
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,49 +66,133 @@
 
 OpsRamp is an AIOps and IT operations management platform for hybrid infrastructure monitoring and management.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/opsramp/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/opsramp/refs/heads/main/apis.yml)
+**Areas:** AIOps · IT Operations
 
-## Scope
+## OpsRamp on APIs.io
 
-- **Type:** Index
+Everything profiled for OpsRamp is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/opsramp/](https://apis.io/providers/opsramp/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (10)
 
-- AIOps
-- IT Operations
+- [OpsRamp Alerts API](https://apis.io/apis/opsramp/opsramp-alerts-api/) — The Alerts API from OpsRamp — 3 operation(s) for alerts.
+- [OpsRamp Alerts Search API](https://apis.io/apis/opsramp/opsramp-alerts-search-api/) — The Alerts Search API from OpsRamp — 1 operation(s) for alerts search.
+- [OpsRamp Jobs API](https://apis.io/apis/opsramp/opsramp-jobs-api/) — The Jobs API from OpsRamp — 2 operation(s) for jobs.
+- [OpsRamp Monitoring API](https://apis.io/apis/opsramp/opsramp-monitoring-api/) — The Monitoring API from OpsRamp — 1 operation(s) for monitoring.
+- [OpsRamp Resourcemonitors API](https://apis.io/apis/opsramp/opsramp-resourcemonitors-api/) — The Resourcemonitors API from OpsRamp — 1 operation(s) for resourcemonitors.
+- [OpsRamp Resources API](https://apis.io/apis/opsramp/opsramp-resources-api/) — The Resources API from OpsRamp — 3 operation(s) for resources.
+- [OpsRamp Resources Search API](https://apis.io/apis/opsramp/opsramp-resources-search-api/) — The Resources Search API from OpsRamp — 1 operation(s) for resources search.
+- [OpsRamp Tenancy API](https://apis.io/apis/opsramp/opsramp-tenancy-api/) — The Tenancy API from OpsRamp — 1 operation(s) for tenancy.
+- [OpsRamp Ticketentity API](https://apis.io/apis/opsramp/opsramp-ticketentity-api/) — The Ticketentity API from OpsRamp — 2 operation(s) for ticketentity.
+- [OpsRamp Ticketentity Search API](https://apis.io/apis/opsramp/opsramp-ticketentity-search-api/) — The Ticketentity Search API from OpsRamp — 1 operation(s) for ticketentity search.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-03-27
-- **Modified:** 2026-05-19
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### OpsRamp
+Which operations an agent can call, which act, and which need a human in the loop.
 
-OpsRamp is an AIOps and IT operations management platform for hybrid infrastructure monitoring and management.
+- [Opsramp Agentic Access](https://apis.io/agentic-access/opsramp/opsramp-agentic-access/)
 
-- **Human URL:** [https://www.opsramp.com](https://www.opsramp.com)
+#### Collections (11)
 
-#### Tags
+Postman and Open Collection request collections.
 
-- AIOps
+- [OpsRamp API](https://apis.io/collections/opsramp/open-opsramp/)
+- [OpsRamp Alerts API](https://apis.io/collections/opsramp/open-opsramp-alerts-api/)
+- [OpsRamp Alerts Alerts Search API](https://apis.io/collections/opsramp/open-opsramp-alerts-search-api/)
+- [OpsRamp Alerts Jobs API](https://apis.io/collections/opsramp/open-opsramp-jobs-api/)
+- [OpsRamp Alerts Monitoring API](https://apis.io/collections/opsramp/open-opsramp-monitoring-api/)
+- [OpsRamp Alerts Resourcemonitors API](https://apis.io/collections/opsramp/open-opsramp-resourcemonitors-api/)
+- [OpsRamp Alerts Resources API](https://apis.io/collections/opsramp/open-opsramp-resources-api/)
+- [OpsRamp Alerts Resources Search API](https://apis.io/collections/opsramp/open-opsramp-resources-search-api/)
+- [OpsRamp Alerts Tenancy API](https://apis.io/collections/opsramp/open-opsramp-tenancy-api/)
+- [OpsRamp Alerts Ticketentity API](https://apis.io/collections/opsramp/open-opsramp-ticketentity-api/)
+- [OpsRamp Alerts Ticketentity Search API](https://apis.io/collections/opsramp/open-opsramp-ticketentity-search-api/)
 
-#### Properties
+#### Security (1)
 
-- [Documentation](https://docs.opsramp.com)
-- [OpenAPI](openapi/opsramp-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/opsramp.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/opsramp.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Authentication, trust centre, and vulnerability disclosure.
 
-## Common Properties
+- [Opsramp Domain Security](https://apis.io/security/opsramp/opsramp-domain-security/)
 
-- [GitHub Organization](https://github.com/opsramp)
-- [LinkedIn](https://www.linkedin.com/company/opsramp)
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Opsramp Plans Pricing](https://apis.io/plans/opsramp/opsramp-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Opsramp Rate Limits](https://apis.io/rate-limits/opsramp/opsramp-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Opsramp Finops](https://apis.io/finops/opsramp/opsramp-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
 - [Website](https://www.opsramp.com)
 - [Documentation](https://docs.opsramp.com)
+- [Blog](https://blog.opsramp.com/rss.xml)
+- [GitHub](https://github.com/opsramp)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 17.3** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 44.6 |
+| Contract quality | 38.6 |
+| Contract governance | 0.0 |
+| Operational transparency | 10.5 |
+| Developer ergonomics | 11.9 |
+| Access clarity | 7.9 |
+
+**Agent readiness 15.4** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 5.9** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/opsramp/](https://apis.io/providers/opsramp/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for OpsRamp: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/opsramp/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
